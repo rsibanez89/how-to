@@ -1,8 +1,8 @@
 # Setting up a new mac for devs
 
-1. Install Chrome browser: https://www.google.com/intl/en_au/chrome/
+1. [Install Chrome browser](https://www.google.com/intl/en_au/chrome/)
 
-2. Install brew https://brew.sh/
+2. [Install brew](https://brew.sh/) 
 
 Then use brew to install:
 
@@ -30,9 +30,21 @@ git config --global user.email "rsibanez89@gmail.com"
 - [just (command runner)](https://formulae.brew.sh/formula/just#default) → `brew install just`
 - [z (change directory quickly)](https://formulae.brew.sh/formula/z#default) → `brew install z`
 
-3. [Install Rectangle to manage windows like windows](https://rectangleapp.com/)
+3. Install Java using [sdkman](https://sdkman.io/install):
+```bash
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+# Install latest Java
+sdk install java
+# List all available Java versions
+sdk list java
+# Install specific version of Java (8)
+sdk install java 8.0.382-amzn
+```
 
-4. Change some default settings:
+4. Install [Rectangle](https://rectangleapp.com/) to manage windows like windows
+
+5. Change some default settings:
 - Remove delay of dock appearing: `defaults write com.apple.Dock autohide-delay -float 0 && killall Dock`
 - Show all hidden files `defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder`
 - Speed up animation: `defaults write NSGlobalDomain NSWindowResizeTime -float 0.001 && killall Finder`
